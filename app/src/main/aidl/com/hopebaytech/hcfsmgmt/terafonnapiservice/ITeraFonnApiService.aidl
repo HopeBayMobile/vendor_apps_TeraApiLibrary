@@ -11,13 +11,13 @@ interface ITeraFonnApiService {
 
     boolean getJWTandIMEI();
 
-    /** Register the FetchAppData listener */
+    /** RegisterProxy the FetchAppData listener */
     void setFetchAppDataListener(IFetchAppDataListener listener);
 
     /** Force system to download all data not in local of this app */
     boolean fetchAppData(String packageName);
 
-    /** Register the FetchAppData listener */
+    /** RegisterProxy the FetchAppData listener */
     void setTrackAppStatusListener(ITrackAppStatusListener listener);
 
     /**
@@ -26,6 +26,7 @@ interface ITeraFonnApiService {
      * */
     boolean addTrackAppStatus(in List<String> packageNameList);
 
+    /** Stop tracking Apps in the given pakcage name list */
     boolean removeTrackAppStatus(in List<String> packageNameList);
 
     /** Clear the package tracked list. No packages are tracked anymore. */
@@ -34,14 +35,19 @@ interface ITeraFonnApiService {
     /** Get app status of all apps in packageNameList */
     AppInfo getAppInfo(in List<String> packageNameList);
 
+    /** Pin an App with given package name */
     boolean pinApp(String packageName);
 
+    /** Unpin an App with given package name */
     boolean unpinApp(String packageName);
 
     /** Check datalocation of all apps in appList */
     int checkAppAvailable(String packageName);
 
+    /** Get the HCFS status and related information */
     String getHCFSStat();
 
+    /** Check whether HCFS is enabled */
     boolean hcfsEnabled();
+
 }

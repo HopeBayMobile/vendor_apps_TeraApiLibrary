@@ -8,10 +8,6 @@ import android.os.Parcelable;
  */
 public class AppStatus implements Parcelable {
 
-    public static final String LOCATION_LOCAL = "local";
-    public static final String LOCATION_HYBRID = "hybrid";
-    public static final String LOCATION_CLOUD = "cloud";
-
     public static final int STATUS_AVAILABLE  = 0;
     public static final int STATUS_UNAVAILABLE = 1;
     public static final int STATUS_UNAVAILABLE_WAIT_TO_DOWNLOAD  = 1;
