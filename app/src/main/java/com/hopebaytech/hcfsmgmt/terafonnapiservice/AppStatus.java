@@ -8,6 +8,18 @@ import android.os.Parcelable;
  */
 public class AppStatus implements Parcelable {
 
+    public static class BoostStatus {
+        public static final int NON_BOOSTABLE = 0;
+        public static final int INIT_UNBOOST = 1;
+        public static final int UNBOOSTED = 2;
+        public static final int UNBOOSTING = 3;
+        public static final int UNBOOST_FAILED = 4;
+        public static final int INIT_BOOST = 5;
+        public static final int BOOSTED = 6;
+        public static final int BOOSTING = 7;
+        public static final int BOOST_FAILED = 8;
+    }
+
     public static final int STATUS_AVAILABLE  = 0;
     public static final int STATUS_UNAVAILABLE = 1;
     public static final int STATUS_UNAVAILABLE_WAIT_TO_DOWNLOAD  = 1;
